@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Racing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui">
+            <div id="stats">
+                <div class="stat">
+                    <span class="label">SPEED</span>
+                    <span id="speed-display" class="value">0</span>
+                    <span class="unit">KM/H</span>
+                </div>
+                <div class="stat">
+                    <span class="label">DISTANCE</span>
+                    <span id="distance-display" class="value">0</span>
+                    <span class="unit">M</span>
+                </div>
+                <div class="stat">
+                    <span class="label">SCORE</span>
+                    <span id="score-display" class="value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">LIVES</span>
+                    <div id="lives-display" class="hearts">❤️ ❤️ ❤️</div>
+                </div>
+            </div>
+            <div id="controls-hint">
+                ← → Arrow Keys to Steer | ↑ Accelerate | ↓ Brake | SPACE Boost
+            </div>
+        </div>
+        <div id="start-screen" class="overlay">
+            <h1>🏍️ BIKE RACING</h1>
+            <p class="subtitle">Dodge traffic, collect coins, survive!</p>
+            <button id="start-btn">START RACE</button>
+            <div class="instructions">
+                <h3>CONTROLS</h3>
+                <div class="key-row"><kbd>←</kbd><kbd>→</kbd> Steer Left/Right</div>
+                <div class="key-row"><kbd>↑</kbd> Accelerate</div>
+                <div class="key-row"><kbd>↓</kbd> Brake</div>
+                <div class="key-row"><kbd>SPACE</kbd> Nitro Boost</div>
+            </div>
+        </div>
+        <div id="game-over-screen" class="overlay hidden">
+            <h1>💥 GAME OVER</h1>
+            <div id="final-stats">
+                <p>Distance: <span id="final-distance">0</span> m</p>
+                <p>Score: <span id="final-score">0</span></p>
+                <p>Best: <span id="best-score">0</span></p>
+            </div>
+            <button id="restart-btn">RACE AGAIN</button>
+        </div>
+        <div id="pause-screen" class="overlay hidden">
+            <h1>⏸️ PAUSED</h1>
+            <p>Press <kbd>P</kbd> or <kbd>ESC</kbd> to resume</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
